@@ -29,5 +29,7 @@ location ~ /terminals/ {
 
     listen 80;
     listen 443 ssl;
-    ssl_certificate_key /etc/ssl/certs/mykey.key;   
+       
+    ssl_certificate /etc/nginx/ssl/nginx.crt;
+    ssl_certificate_key /etc/nginx/ssl/nginx.key;
 }
