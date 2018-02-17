@@ -9,9 +9,15 @@ This container is intended to provide reverse proxy for the Jupyter notebook pro
 
 # Running the container
 
-Before running this container, you must have the AIHackathon-AnacondawithWine container running and it must be named anacondawithwine (this is included in the example run command specified on that repository. 
+Before running this container, you must have the AIHackathon-AnacondawithWine container running and it must be named anacondawithwine (this is included in the example run command specified on that repository). 
 
-`docker run --name njrp --link anacondawithwine:jnbk -it -p 80:80 -p 443:443 keviny101/nginx-jupyter-reverseproxy`
+Also you must have a valid SSL certificate, which requires a valid domain name. If you have one, great, use that and point it to your server's public IP address. If not, let us know and we can provide one. Ensure that is all working and registered and points to your public IP address, then start this container ensuring you have specified the fqdn (e.g. www.fun-with-ai.co.uk)
+
+`docker run --name njrp --hostname [enter domain name] --link anacondawithwine:jnbk -it -p 80:80 -p 443:443 keviny101/nginx-jupyter-reverseproxy`
+
+example : 
+
+`docker run --name njrp --hostname www.fun-with-ai.co.uk --link anacondawithwine:jnbk -it -p 80:80 -p 443:443 keviny101/nginx-jupyter-reverseproxy`
 
 # That's it
 
