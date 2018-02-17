@@ -21,7 +21,7 @@ example :
 
 # Caution
 
-Do not run this too many times otherwise we shall exceed our SSL request limit from Let's Encrypt.
+Do not run this too many times otherwise you'll exceed your SSL request limit from Let's Encrypt, which is 20 per week.
 
 # That's it
 
