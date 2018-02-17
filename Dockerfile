@@ -18,6 +18,6 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx.key -out n
 
 # Restart nginx for the above settings to take effect
 
-RUN /etc/init.d/nginx restart
+#RUN /etc/init.d/nginx reload
 
-CMD ["/bin/bash"]
+ENTRYPOINT service nginx restart && /bin/bash
