@@ -1,4 +1,8 @@
+# Canning this project!!
+Due to the need to safely request certificate from Let's Encrypt for this to work, the reserve proxy shall be provided centrally rather than as an individual container per team. Therefore, whilst this worked in principle, it shall no longer be progressed.
+
 # nginx-jupyter-reverseproxy
+
 provides jupyter notebook with a reverse proxy using nginx. Great for providing SSL and also bypassing web socket issues when accessing behind a firewall. Once running browse to https://[ip address]/. As a self-signed certificate is used, you'll need to accept any security warnings!
 
 # Set-up Docker
