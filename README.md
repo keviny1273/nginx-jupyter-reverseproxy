@@ -19,6 +19,10 @@ example :
 
 `docker run --name njrp --hostname www.fun-with-ai.co.uk --link anacondawithwine:jnbk -it -p 80:80 -p 443:443 keviny101/nginx-jupyter-reverseproxy`
 
+# Caution
+
+Do not run this too many times otherwise we shall exceed our SSL request limit from Let's Encrypt.
+
 # That's it
 
 It should be as simple as that. As stated above, now you'll have a secure connection to your jupyter notebook (there is also a non-secure (http) connection too but this will redirect to https). From your browser navigate to the public IP address. If you have any issues, ensure that there are no firewalls (e.g. K5 security groups) blocking access to port 443 (or port 80 for http). 
